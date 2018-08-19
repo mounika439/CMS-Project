@@ -13,31 +13,41 @@
 
 <body>
 
-<div id="wrapper">
-
-	<div id="header">
-	
-		<!-- add out html here  -->
-		<table>
-			<tr>
-				<th> First Name </th>
-				<th> Last Name </th>				
-				<th> Email </th>
-			</tr>
-			<!-- loop over and print our customers  -->
-			<c:forEach var="tempCustomer" items="${customers}">
-				<tr>
-					<td> ${tempCustomer.firstName} </td>
-					<td> ${tempCustomer.lastName} </td>
-					<td> ${tempCustomer.email} </td>
-				</tr>
-			</c:forEach>
-			
-		</table>
-	
+	<div id="wrapper">
+		<div id="header">
+			<h2> CRM - Customer Relationship Manager  </h2>
+		</div>
 	</div>
 	
-</div>
+	<div id="container">
+		<div id="content">
+			<input type="button" value="Add Customer"  class="add-button" onclick="window.location.href = 'showFormForAdd'; return false;"  />
+			<!-- add out html here  -->
+			<table>
+				<tr>
+					<th> First Name </th>
+					<th> Last Name </th>				
+					<th> Email </th>
+					<th> Action </th>
+				</tr>
+				<!-- loop over and print our customers  -->
+				<c:forEach var="tempCustomer" items="${customers}">
+					<!-- construct an "update" link with customer id -->
+					<c:url var ="updateLink" value ="/cusomer/showFormForUpdate">
+						<c:param name ="customerId" value="${tempCustomer.id}"/>
+					</c:url>
+					
+					<tr>
+						<td> ${tempCustomer.firstName} </td>
+						<td> ${tempCustomer.lastName} </td>
+						<td> ${tempCustomer.email} </td>
+						<td> <a href="${updateLink}">Update</a></td>
+					</tr>
+				</c:forEach>
+				
+			</table>
+		</div>
+	</div>	
 
 </body>
 </html>
