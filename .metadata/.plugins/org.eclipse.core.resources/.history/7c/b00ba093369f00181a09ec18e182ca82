@@ -1,0 +1,8 @@
+package com.luv2code.springdemo.entity;
+
+
+@Entity
+@Table(name = "customer")
+public class Customer {
+
+}

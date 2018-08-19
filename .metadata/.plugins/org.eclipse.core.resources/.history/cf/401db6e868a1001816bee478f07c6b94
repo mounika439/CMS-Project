@@ -1,0 +1,16 @@
+package com.luv2code.practice;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Contacts addContact = new Contacts("mounika","uppala",123456,"@gmail.com");
+		
+		System.out.println(addContact.getFirstName());
+		System.out.println(addContact.getLastName());
+		System.out.println(addContact.getEmail());
+		System.out.println(addContact.getContactNumber());
+
+	}
+
+}

@@ -1,0 +1,54 @@
+package com.luv2code.practice;
+
+public class Contacts {
+	
+	private String firstName;
+	private String lastName;
+	private int contactNumber;
+	private String email;
+	
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public int getContactNumber() {
+		return contactNumber;
+	}
+	public void setContactNumber(int contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+	}
+	
+	
+	
+	public Contacts(String firstName, String lastName, int contactNumber, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.contactNumber = contactNumber;
+		this.email = email;
+	}
+	public Contacts() {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.contactNumber = contactNumber;
+		this.email = email;
+	}
+	
+	
+
+}
